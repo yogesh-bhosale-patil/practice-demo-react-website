@@ -1,4 +1,4 @@
-name: Workflow Artifact Demo
+name: Dependency Caching Demo
 
 on:
     push:
