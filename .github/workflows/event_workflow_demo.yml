@@ -7,7 +7,12 @@ on:
         types:
             - opened
     workflow_dispatch:
-
+    push:
+        branches:
+            - main
+            - dev
+        paths-ignore:
+            - "**.md"
 jobs:
     lint-test-build-deploy:
         runs-on: ubuntu-latest
@@ -27,4 +32,4 @@ jobs:
             - name: Build project
               run: npm run build
             - name: Deploy to Server
-              run: echo "Deploying to server..."
+              run: echo "Deploying to server...."
